@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std; 
+
+class one 
+{
+    public : 
+     void display()
+     {
+        cout << " from the first base class " << endl;
+
+     }
+};
+
+class two
+{
+    public :
+    void display()
+    {
+        cout << " from the second base class " << endl;
+    }
+};
+
+class three : public one , public two 
+{
+    public: 
+        void display()
+        {
+            cout << " from the derived class " << endl;
+            // display(); ambiguity error is seen 
+            // one :: display();    ANOTHER WAY OF SOLVING  THE   QUESTION LIKE THIS .
+            // two :: display();
+        }
+};
+
+int main() 
+    {
+        three d;
+        d.display();
+         d.one :: display();
+         d.two :: display();
+return 0;
+    }
