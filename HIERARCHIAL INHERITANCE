@@ -1,0 +1,65 @@
+// using  concept of hierarchial inheritance to add , subtract and multiply two numbers .
+#include<iostream>
+using namespace std; 
+
+class num
+{
+    protected : int x, y;
+    public : 
+    void give_data()
+{
+    cout << " enter the value for the data you want to calculate : " << endl;
+    cin >> x >> y;
+}
+
+    void showdata()
+    { cout << " the numbers are : " << x << "\t " << y << endl; }
+};
+
+class addition : public num
+{
+    int a;
+    public : 
+     void add ()
+     {
+        a = x + y;
+        cout << " the addtion is : " << a << endl;
+     }
+};
+ class subtract : public num 
+ {
+     int s;
+     public: 
+     void sub()
+     {
+        s = y -x;
+        cout << " the sutbraction is : " << s << endl;
+     }
+ };
+ class multiply : public num
+ {
+    int m;
+    public : 
+    void mul()
+    {
+        m= x*y;
+        cout << " the multiplication is : " << m << endl;
+    }
+ };
+int main() 
+
+{
+   num n;
+   n.give_data();  // almost useless steps 
+   n.showdata();   // almost useless steps 
+   addition ad;
+   subtract su;
+   multiply mu;
+   ad.give_data();
+   ad.add();
+   su.give_data();
+   su.sub();
+   mu.give_data();
+   mu.mul();
+  return 0;
+}
