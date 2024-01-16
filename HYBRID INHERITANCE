@@ -1,0 +1,54 @@
+// HYBRID INHERITANCE 
+#include<iostream>
+using namespace std; 
+
+class A
+{
+    protected : int x;
+    public : void assign_x()
+    { x=23; }
+
+};
+class B : public A 
+{ 
+     protected : int y;
+     public : void assign_y()
+     {y=58;}
+};
+
+class C : public B
+{
+    protected : int z;
+    public: void assign_z()
+    {z=90;}
+};
+ 
+ class m 
+ {
+    protected : int k ;
+    public: void assign_m()
+    {k= 211;}
+ };
+
+ class D : public C, public m
+ {
+    int total;
+    public:
+        void show()
+        {
+            total = x+y+z+k ;
+            cout << " the total sum at final is : " << total <<  endl;
+        }
+ };
+
+int main() 
+
+{
+    D ob;
+    ob.assign_x();
+    ob.assign_y();
+    ob.assign_z();
+    ob.assign_m();
+    ob.show();
+     return 0;
+}
