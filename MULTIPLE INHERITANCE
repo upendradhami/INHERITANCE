@@ -1,0 +1,49 @@
+  // wap to add numbers taking data from two base class and add them on a new derived class.
+#include<iostream>
+using namespace std; 
+
+class one 
+{
+  protected: int x;
+  public : 
+     void display()
+     {
+      cout << x << endl;
+
+     }
+};
+class two 
+{
+  protected : int y;
+  public : 
+      void show()
+      {
+        cout << y << endl;
+
+      }
+};
+
+class three : public one, public two 
+{
+  int z;
+  public :
+   void enter ()
+   {
+    cin >> x >> y;
+   } 
+     void add()
+     {
+      z= x+y;
+      cout << " the sum of two numbers is :" << z << endl;
+     }
+};
+int main()
+ 
+ {three obj;
+  obj.enter();
+  obj.show();
+  obj.display();
+  obj.add();
+  return 0;
+}
+
