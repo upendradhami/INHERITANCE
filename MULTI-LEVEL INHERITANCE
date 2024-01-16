@@ -1,0 +1,55 @@
+//WAP TP GET DATA  OF  STUDENDT FROM FISRST CLASS , PUT MARKS OF STUDNET ON SECOND  AND FINALLY PUBLISH
+// THE RESULT IN THE  THIRD CLASS , using concept of multilevel inheritance. 
+ #include<iostream>
+using namespace std;
+    class student 
+    {
+        protected : char name[88];
+                     int roll;
+        public : 
+              void get_data();
+              void show_data(); 
+    };
+    void student :: get_data()
+    {
+        cout << " enter the data of student : " << endl;
+        cin >> name >> roll ;
+    }
+    void student :: show_data()
+    {
+          cout << "\n name:  " << name  << "\n roll : " << roll << endl;
+    }
+    class marks : public student 
+    {
+        protected : int x, y;
+        public: 
+             void enterres(int a, int b)
+             {
+                x=a;
+                y=b;
+
+             } 
+    };
+    class result : public marks
+    {
+       public :
+        void display()
+        {
+            int res ;
+            res= x +y;
+            student ::show_data();
+            cout << " total marks obtained is  final result : " << res << endl;
+        }
+    };
+    
+int main() 
+
+{
+     result r;
+    r.student ::get_data();
+
+     r.enterres(45,56);
+     r.display();
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+     return 0;
+}
