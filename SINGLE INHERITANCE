@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std; 
+class X
+{
+  int x,y;
+  void show()
+  {
+    cout << x << y;
+  }
+  public : 
+    int z;
+    void sum ()
+    {
+      
+      cout << z ;
+
+    }
+};
+class Y : public X
+{
+  int a, b;
+  public : 
+  void enter ()
+  { 
+    cin >> a >> b;
+  }
+  void display()
+{ 
+   cout << a << "\n" <<  b << endl;
+}
+};
+int main() 
+
+{
+  X m;
+  Y n;
+  n.z=29;
+  n.sum();
+  n.enter();
+  n.display();
+  n.sum ();
+
+  return 0;
+}
+
