@@ -1,0 +1,39 @@
+ #include<iostream>
+ using namespace std; 
+ 
+ class base
+ {
+    public: 
+      base()
+      {
+        cout << " the base class constructor " << endl;
+      }
+      ~base()
+      {
+        cout << " the base class destructor " << endl;
+      }
+ };
+      class derived : public base
+      {
+        public:
+         derived()
+         { 
+            cout << " the derived class constructor " << endl;
+
+         }
+         ~derived()
+         {
+            cout << " the derived class destructor " << endl;
+         }
+      };
+
+ int main() 
+ 
+ {
+    
+    derived d;
+
+     
+ 
+     return 0;
+ }
