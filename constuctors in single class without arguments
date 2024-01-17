@@ -37,3 +37,8 @@
  
      return 0;
  }
+
+
+WITH A  PARAMETER IN A SINGLE INHERITANCE :
+
+  
